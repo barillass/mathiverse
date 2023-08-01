@@ -1,0 +1,105 @@
+body {
+    font-family: "Comfortaa", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3E99F;
+    color: #F24C3D;
+}
+
+h1, h2, h3 {
+    font-family: "Archivo Black", sans-serif;
+    color: #22A699;
+}
+
+header {
+    background-color: #F24C3D;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    color: #FFD93D;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F2BE22;
+    padding: 5px 10px;
+    background-color: #F29727;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #F24C3D;
+    color: #F2BE22;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    max-width: 1000px; /* Ajustamos el ancho máximo de las secciones */
+    margin: 0 auto; /* Centramos las secciones en la página */
+    margin-bottom: 40px; /* Aumentamos el margen inferior */
+    background-color: #F7D060;
+    padding: 20px; /* Aumentamos el padding para más espacio alrededor del contenido */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregamos la sombra */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* Aumentamos el margen inferior */
+}
+
+input, select, button {
+    margin-bottom: 15px; /* Aumentamos el margen inferior */
+    padding: 8px; /* Aumentamos el padding para más espacio interno */
+    outline: none;
+    border: none;
+}
+
+button {
+    background-color: #F97B22;
+    color: #F2BE22;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #F24C3D;
+    color: #F2BE22;
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Estilos específicos para los títulos */
+h2 {
+    font-size: 28px; /* Aumentamos el tamaño de los títulos h2 */
+}
+
+h3 {
+    font-size: 24px; /* Aumentamos el tamaño de los títulos h3 */
+}
+

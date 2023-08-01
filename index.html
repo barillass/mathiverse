@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pura Mate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Pura Mate</h1>
+        <nav>
+            <ul>
+                <li><a href="#potencias">Potencias</a></li>
+                <li><a href="#raices">Raíces</a></li>
+                <li><a href="#areas">Cálculo de Áreas</a></li>
+                <li><a href="#conversiones">Conversiones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="potencias">
+            <h2>Calculadora de Potencias</h2>
+            <label for="base">Base:</label>
+            <input type="number" id="base">
+            <label for="exponente">Exponente:</label>
+            <input type="number" id="exponente">
+            <button onclick="calcularPotencia()">Calcular</button>
+            <p id="resultadoPotencia"></p>
+        </section>
+
+        <section id="raices">
+            <h2>Calculadora de Raíces</h2>
+            <label for="numero">Número:</label>
+            <input type="number" id="numero">
+            <label for="indice">Índice:</label>
+            <input type="number" id="indice">
+            <button onclick="calcularRaiz()">Calcular</button>
+            <p id="resultadoRaiz"></p>
+        </section>
+
+        <section id="areas">
+            <h2>Cálculo de Áreas</h2>
+            <h3>Triángulo</h3>
+            <label for="baseTriangulo">Base:</label>
+            <input type="number" id="baseTriangulo">
+            <label for="alturaTriangulo">Altura:</label>
+            <input type="number" id="alturaTriangulo">
+            <button onclick="calcularAreaTriangulo()">Calcular</button>
+            <p id="resultadoAreaTriangulo"></p>
+
+            <h3>Rectángulo</h3>
+            <label for="lado1Rectangulo">Lado 1:</label>
+            <input type="number" id="lado1Rectangulo">
+            <label for="lado2Rectangulo">Lado 2:</label>
+            <input type="number" id="lado2Rectangulo">
+            <button onclick="calcularAreaRectangulo()">Calcular</button>
+            <p id="resultadoAreaRectangulo"></p>
+
+            <h3>Cuadrado</h3>
+            <label for="ladoCuadrado">Lado:</label>
+            <input type="number" id="ladoCuadrado">
+            <button onclick="calcularAreaCuadrado()">Calcular</button>
+            <p id="resultadoAreaCuadrado"></p>
+
+            <h3>Círculo</h3>
+            <label for="radioCirculo">Radio:</label>
+            <input type="number" id="radioCirculo">
+            <button onclick="calcularAreaCirculo()">Calcular</button>
+            <p id="resultadoAreaCirculo"></p>
+        </section>
+
+        <section id="conversiones">
+            <h2>Conversiones</h2>
+            <h3>Conversión de Masa</h3>
+            <label for="masa">Cantidad:</label>
+            <input type="number" id="masa">
+            <label for="unidadOrigenMasa">Unidad de origen:</label>
+            <select id="unidadOrigenMasa">
+                <option value="gramo">Gramo (g)</option>
+                <option value="kilogramo">Kilogramo (kg)</option>
+                <option value="libra">Libra (lb)</option>
+                <option value="onza">Onza (oz)</option>
+            </select>
+            <label for="unidadDestinoMasa">Unidad de destino:</label>
+            <select id="unidadDestinoMasa">
+                <option value="gramo">Gramo (g)</option>
+                <option value="kilogramo">Kilogramo (kg)</option>
+                <option value="libra">Libra (lb)</option>
+                <option value="onza">Onza (oz)</option>
+            </select>
+            <button onclick="convertirMasa()">Convertir</button>
+            <p id="resultadoMasa"></p>
+        
+
+        <!-- Longitud -->
+            <h3>Conversión de Longitud</h3>
+            <label for="longitud">Cantidad:</label>
+            <input type="number" id="longitud">
+            <label for="unidadOrigenLongitud">Unidad de origen:</label>
+            <select id="unidadOrigenLongitud">
+                <option value="metro">Metro (m)</option>
+                <option value="centimetro">Centímetro (cm)</option>
+                <option value="milimetro">Milímetro (mm)</option>
+                <option value="kilometro">Kilómetro (km)</option>
+                <option value="pulgada">Pulgada (in)</option>
+                <option value="pie">Pie (ft)</option>
+                </select>
+            <label for="unidadDestinoLongitud">Unidad de destino:</label>
+            <select id="unidadDestinoLongitud">
+                <option value="metro">Metro (m)</option>
+                <option value="centimetro">Centímetro (cm)</option>
+                <option value="milimetro">Milímetro (mm)</option>
+                <option value="kilometro">Kilómetro (km)</option>
+                <option value="pulgada">Pulgada (in)</option>
+                <option value="pie">Pie (ft)</option>
+            </select>
+            <button onclick="convertirLongitud()">Convertir</button>
+            <p id="resultadoLongitud"></p>
+
+            <!-- Densidad -->
+                <h3>Conversión de Densidad</h3>
+                <label for="densidad">Cantidad:</label>
+                <input type="number" id="densidad">
+                <label for="unidadOrigenDensidad">Unidad de origen:</label>
+                <select id="unidadOrigenDensidad">
+                    <option value="kg/m3">Kilogramo por metro cúbico (kg/m³)</option>
+                    <option value="g/cm3">Gramo por centímetro cúbico (g/cm³)</option>
+                    <option value="lb/ft3">Libra por pie cúbico (lb/ft³)</option>
+                </select>
+                <label for="unidadDestinoDensidad">Unidad de destino:</label>
+                <select id="unidadDestinoDensidad">
+                    <option value="kg/m3">Kilogramo por metro cúbico (kg/m³)</option>
+                    <option value="g/cm3">Gramo por centímetro cúbico (g/cm³)</option>
+                    <option value="lb/ft3">Libra por pie cúbico (lb/ft³)</option>
+                </select>
+                <button onclick="convertirDensidad()">Convertir</button>
+                <p id="resultadoDensidad"></p>
+
+            <!-- Medidas Informáticas -->
+                <h3>Conversión de Medidas de Informática</h3>
+                <label for="cantidadInformatica">Cantidad:</label>
+                <input type="number" id="cantidadInformatica">
+                <label for="unidadOrigenInformatica">Unidad de origen:</label>
+                <select id="unidadOrigenInformatica">
+                    <option value="byte">Byte (B)</option>
+                    <option value="kilobyte">Kilobyte (KB)</option>
+                    <option value="megabyte">Megabyte (MB)</option>
+                    <option value="gigabyte">Gigabyte (GB)</option>
+                    <option value="terabyte">Terabyte (TB)</option>
+                    <option value="petabyte">Petabyte (PB)</option>
+                    <option value="exabyte">Exabyte (EB)</option>
+                    <option value="zettabyte">Zettabyte (ZB)</option>
+                </select>
+                <label for="unidadDestinoInformatica">Unidad de destino:</label>
+                <select id="unidadDestinoInformatica">
+                    <option value="byte">Byte (B)</option>
+                    <option value="kilobyte">Kilobyte (KB)</option>
+                    <option value="megabyte">Megabyte (MB)</option>
+                    <option value="gigabyte">Gigabyte (GB)</option>
+                    <option value="terabyte">Terabyte (TB)</option>
+                    <option value="petabyte">Petabyte (PB)</option>
+                    <option value="exabyte">Exabyte (EB)</option>
+                    <option value="zettabyte">Zettabyte (ZB)</option>
+                </select>
+                <button onclick="convertirInformatica()">Convertir</button>
+                <p id="resultadoInformatica"></p>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
